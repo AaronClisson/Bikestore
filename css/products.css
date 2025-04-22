@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap');
+
+:root {
+    --main-color: #ff5e00;
+    --dark-color: #222;
+    --light-color: #f5f5f5;
+    --secondary-color: #0088ff;
+    --highlight-color: #f8c100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background: var(--light-color);
+    color: var(--dark-color);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+form select,
+form input[type="text"],
+form input[type="range"] {
+    padding: 8px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+form input[type="range"] {
+    width: 250px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--light-color);
+}
+
+table th {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: var(--highlight-color);
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+    form select,
+    form input[type="text"],
+    form input[type="range"] {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.pagination a {
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    width: 40px; /* Add width to make it square and more button-like */
+}
+
+.pagination a:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .active {
+    background-color: var(--secondary-color);
+    cursor: default;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.pagination .disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #777;
+}
+
+.pagination .prev,
+.pagination .next {
+    width: 60px; /* Wider buttons for prev/next */
+}
+
+.pagination .prev:hover,
+.pagination .next:hover {
+    background-color: var(--secondary-color);
+}
+
+.pagination .prev.disabled,
+.pagination .next.disabled {
+    background-color: #e0e0e0;
+    color: #bbb;
+    cursor: not-allowed;
+}
+
+/* Styles pour les boutons d'actions */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Bouton Edit */
+.action-buttons .edit-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.action-buttons .edit-btn:hover {
+    background-color: #005fbf;
+    transform: scale(1.05);
+}
+
+/* Bouton Delete */
+.action-buttons .delete-btn {
+    background-color: #ff3b30;
+    color: white;
+}
+
+.action-buttons .delete-btn:hover {
+    background-color: #cc2b20;
+    transform: scale(1.05);
+}
+
+.btn-add {
+    background-color: var(--main-color);
+    color: white;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+.btn-add:hover {
+    background-color: var(--secondary-color);
+}
+
+

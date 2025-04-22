@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap');
+
+:root {
+    --main-color: #ff5e00;
+    --dark-color: #222;
+    --light-color: #f5f5f5;
+    --secondary-color: #0088ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+header {
+    background: linear-gradient(135deg, var(--main-color), var(--secondary-color));
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+#carte {
+    width: 80%;
+    max-width: 800px;
+    height: 500px;
+    margin: 30px auto;
+    border-radius: 15px;
+    border: 3px solid var(--main-color);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+#carte:hover {
+    transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+    #carte {
+        width: 90%;
+        height: 400px;
+    }
+}
+
+footer {
+    background: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+#footermenu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#footermenu a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#footermenu a:hover {
+    color: var(--secondary-color);
+}
+
+address {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+address a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-weight: bold;
+    color: var(--main-color);
+    animation: colorShift 3s infinite alternate;
+}

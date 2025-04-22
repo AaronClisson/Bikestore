@@ -1,0 +1,217 @@
+/* 🏁 Importation des polices modernes */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap');
+
+/* 🎨 Variables de couleur */
+:root {
+    --main-color: #ff5e00; /* Orange dynamique */
+    --dark-color: #222;
+    --light-color: #f5f5f5;
+    --secondary-color: #0088ff; /* Bleu vélo de route */
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+/* 🌍 Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* 🚀 Container global */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* 🚴‍♂️ HEADER */
+header {
+    background: linear-gradient(135deg, var(--main-color), var(--secondary-color));
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+    background: url('../img/logo.png') no-repeat center;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* 🏷️ Formulaires */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+button {
+    background: var(--main-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* 📌 Cartes */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* 📌 Tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: var(--main-color);
+    color: white;
+}
+
+/* 🚵‍♂️ FOOTER */
+footer {
+    background: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+#footermenu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#footermenu a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+#footermenu a:hover {
+    color: var(--secondary-color);
+}
+
+address {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+address a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+/* 🎨 Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.btn-cancel {
+    background: #ccc; /* Gris neutre */
+    color: #333; /* Texte foncé */
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.btn-cancel:hover {
+    background: #999;
+    transform: scale(1.05);
+}
